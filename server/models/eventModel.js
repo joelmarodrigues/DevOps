@@ -1,44 +1,28 @@
-import { Sequelize } from "sequelize";
-import connectDb from "../config/database.js";
+import db from "../config/database";
 
-const db = await connectDb();
-const createEventModel = (db) => {
-  const Event = db.define("event", {
-    id: {
-      type: Sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    title: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    subject: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    start: {
-      type: Sequelize.DATE,
-      allowNull: false,
-    },
-    end: {
-      type: Sequelize.DATE,
-      allowNull: false,
-    },
-    description: {
-      type: Sequelize.TEXT,
-    },
-    createdByUserId: {
-      type: Sequelize.STRING,
-    },
-    backgroundColor: {
-      type: Sequelize.STRING,
-    },
-  });
+const Event = db.sequelize.define("event", {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    allowNull: false,
+    primaryKey: true,
+  },
+  title: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  description: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  start_date: {
+    type: Sequelize.DATE,
+    allowNull: false,
+  },
+  end_date: {
+    type: Sequelize.DATE,
+    allowNull: false,
+  },
+});
 
-  return Event;
-};
-
-const Event = createEventModel(db);
-
-export default Event;
+module.exports = Event;
