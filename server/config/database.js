@@ -14,16 +14,7 @@ const server = {
 
 
 /* Localhost */
-const localhost = {
-  database: "DevOps_Calendar", 
-  username: "root", // Change this to your username
-  password: "gds437", // Change this to your password
-  host: "localhost",
-  dialect: "mysql",
-  define: {
-    timestamps: false,
-  },
-};
+
 
 const db1 = new Sequelize(server);
 const db2 = new Sequelize(localhost);
