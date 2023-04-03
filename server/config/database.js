@@ -2,9 +2,9 @@ import { Sequelize } from "sequelize";
 
 /* Server */
 const server = {
-  database: "DevOps_Calendar",
+  database: "devops_calendar",
   username: "root",
-  password: "1234mudar",
+  password: "#QN-*E$dT+@^i,YH",
   host: "35.193.37.252",
   dialect: "mysql",
   define: {
@@ -12,9 +12,17 @@ const server = {
   },
 };
 
-
 /* Localhost */
-
+const localhost = {
+  database: "devops_calendar", 
+  username: "root", // Change this to your username
+  password: "gds437", // Change this to your password
+  host: "localhost",
+  dialect: "mysql",
+  define: {
+    timestamps: false,
+  },
+};
 
 const db1 = new Sequelize(server);
 const db2 = new Sequelize(localhost);
