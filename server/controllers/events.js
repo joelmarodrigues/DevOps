@@ -1,5 +1,5 @@
-const Event = require("../models/eventModel");
- 
+const Event = require("../models/eventModel.js");
+
 exports.getAllEvents = async (req, res) => {
     try {
         const events = await Event.findAll();
@@ -8,8 +8,8 @@ exports.getAllEvents = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
- 
-export const getEventById = async (req, res) => {
+
+exports.getEventById = async (req, res) => {
     try {
         const events = await Event.findAll({
             where: {
@@ -21,8 +21,8 @@ export const getEventById = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
- 
-export const createEvent = async (req, res) => {
+
+exports.createEvent = async (req, res) => {
     try {
         console.log(req.body); // Log the request body
         await Event.create(req.body);
@@ -33,8 +33,8 @@ export const createEvent = async (req, res) => {
         res.json({ message: error.message });
     }
 }
- 
-export const updateEvent = async (req, res) => {
+
+exports.updateEvent = async (req, res) => {
     try {
         await Event.update(req.body, {
             where: {
@@ -48,8 +48,8 @@ export const updateEvent = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
- 
-export const deleteEvent = async (req, res) => {
+
+exports.deleteEvent = async (req, res) => {
     try {
         await Event.destroy({
             where: {
