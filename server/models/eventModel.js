@@ -1,5 +1,6 @@
-import { DataTypes, Sequelize } from 'sequelize';
-const sequelize = require("../config/database");
+import { DataTypes } from 'sequelize';
+import sequelize from '../database';
+import { Sequelize } from 'sequelize';
 
 const Event = sequelize.define('event', {
   id: {
