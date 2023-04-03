@@ -1,7 +1,6 @@
-const Event = require("../models/eventModel.js");
-
+const Event = require("../models/eventModel");
  
-export const getAllEvents = async (req, res) => {
+exports.getAllEvents = async (req, res) => {
     try {
         const events = await Event.findAll();
         res.json(events);
