@@ -4,7 +4,7 @@ import { Sequelize } from "sequelize";
 const server = {
   database: "DevOps_Calendar",
   username: "root",
-  password: "#QN-*E$dT+@^i,YH",
+  password: "1234mudar",
   host: "35.193.37.252",
   dialect: "mysql",
   define: {
