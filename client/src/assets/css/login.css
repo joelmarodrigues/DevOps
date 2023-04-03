@@ -1,0 +1,159 @@
+/* CSS reset */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-around;
+    width: 100%;
+    height: 100vh;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    height: 100%;
+    background-color: #14235D;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    height: 100%;
+}
+
+.media {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 60px;
+    background-color: #283C90;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons {
+    width: 30%;
+    justify-content: space-evenly;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fa {
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-linkedin,
+.fa-youtube {
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 80px 50px;
+}
+
+.signin {
+    display: flex;
+    font-weight: bold;
+    font-size: 36px;
+    color: #000000;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: none;
+    border-bottom: solid;
+    background-color: #f2f2f2;
+}
+
+.name,
+.email,
+.password {
+    display: flex;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.login {
+    display: flex;
+    height: 70px;
+    margin-top: auto;
+}
+
+.switch {
+    margin-top: 10px;
+    text-align: end;
+}
+
+.text-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.text-button:hover {
+    color: #0056b3;
+}
+
+.text-button:focus {
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    background-color: #1D265F;
+    border: none;
+    color: white;
+    text-align: center;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 700;
+    font-size: 36px;
+    align-items: center;
+    letter-spacing: 0.115em;
+}
+
+.btn:hover {
+    background-color: #283C90;
+}
