@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 
 /* Server */
 const server = {
-  database: "DevOps_Calendar",
+  database: "devops_calendar",
   username: "root",
   password: "1234mudar",
   host: "35.193.37.252",
