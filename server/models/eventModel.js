@@ -1,28 +1,41 @@
-import db from "../config/database";
+import { DataTypes } from 'sequelize';
+import sequelize from '../database';
 
-const Event = db.sequelize.define("event", {
+const Event = sequelize.define('event', {
   id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
+    type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
+    autoIncrement: true,
   },
   title: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING(255),
     allowNull: false,
   },
   description: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING(255),
     allowNull: false,
   },
-  start_date: {
-    type: Sequelize.DATE,
+  start: {
+    type: DataTypes.DATE,
     allowNull: false,
   },
-  end_date: {
-    type: Sequelize.DATE,
+  end: {
+    type: DataTypes.DATE,
     allowNull: false,
+  },
+  location: {
+    type: DataTypes.STRING(255),
+    allowNull: false,
+  },
+  created_at: {
+    type: DataTypes.DATE,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+  },
+  updated_at: {
+    type: DataTypes.DATE,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
   },
 });
 
-module.exports = Event;
+export default Event;
