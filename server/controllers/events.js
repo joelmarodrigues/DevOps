@@ -1,4 +1,5 @@
-import Event from "../models/eventModel.js";
+const Event = require("../models/eventModel.js");
+
  
 export const getAllEvents = async (req, res) => {
     try {
