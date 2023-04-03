@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+const { Sequelize } = require('sequelize');
  
 const server = {
   database: "devops_calendar",
@@ -11,7 +11,11 @@ const server = {
   },
 };
  
-const db = new Sequelize(server);
+const db = new Sequelize(server.database, server.username, server.password, {
+  host: server.host,
+  dialect: server.dialect,
+  define: server.define
+});
  
 const connectDb = async () => {
   try {
@@ -25,4 +29,4 @@ const connectDb = async () => {
   }
 };
  
-export default connectDb;
+module.exports = connectDb;
