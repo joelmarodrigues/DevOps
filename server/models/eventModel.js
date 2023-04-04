@@ -2,6 +2,7 @@ import { Sequelize } from "sequelize";
 import connectDb from "../config/database.js";
 
 const db = await connectDb();
+console.log('db:', db);
 const createEventModel = (db) => {
   const Event = db.define("event", {
     id: {
