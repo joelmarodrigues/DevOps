@@ -1,12 +1,11 @@
 import axios from "axios";
 
-const isDevelopment = process.env.NODE_ENV === "development";
-
 const http = axios.create({
-  baseURL: isDevelopment ? "http://localhost:5000" : "http://35.242.175.209:5000",
+  baseURL: "http://34.142.56.192:5000",
   headers: {
     "Content-type": "application/json",
   },
+  timeout: 5000, // Set the timeout to 5 seconds
 });
 
 export const fetchServerStatus = async () => {
