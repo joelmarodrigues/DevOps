@@ -15,7 +15,16 @@ const app = express();
   }
 })();
 
-app.use(cors());
+// Set up custom CORS configuration
+const corsOptions = {
+  origin: "*", // Replace this with your client-side domain or '*' to allow any origin
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+  optionsSuccessStatus: 200,
+};
+
+// Enable CORS with custom options
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(eventRoutes);
 
