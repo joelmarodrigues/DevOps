@@ -1,12 +1,9 @@
 import axios from "axios";
 
-const primaryServer = "http://localhost:5000";
-const localServer = "http://localhost:5000";
-
-const isRunningLocally = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 const http = axios.create({
-  baseURL: isRunningLocally ? localServer : primaryServer,
+  baseURL: isDevelopment ? "http://localhost:5000" : "http://35.242.175.209:5000",
   headers: {
     "Content-type": "application/json",
   },
